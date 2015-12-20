@@ -15,7 +15,7 @@ class NewVisitorTest(LiveServerTestCase):
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertIn(row_text, [row.text for row in rows])
-        
+
     def test_can_start_a_list_and_retrieve_it_later(self):
         self.browser.get(self.live_server_url)
 
@@ -61,6 +61,6 @@ class NewVisitorTest(LiveServerTestCase):
 
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
-        self.assertNIn('Buy milk', page_text)
+        self.assertIn('Buy milk', page_text)
 
         self.fail('Finish the test!')
