@@ -59,6 +59,6 @@ docs/_build/
 target/
 
 /static
-
+/database
 .DS_Store
 .DS_Store?
